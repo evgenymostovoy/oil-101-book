@@ -9,14 +9,9 @@ session log at the bottom.
 - Drilling & completion engineer. D&C is professional ground; everything
   else in the book — geology, reservoir, production, refining, products,
   markets, trading — is new territory and gets full treatment.
-- Dual goal, equally weighted (MISSION.md): commercial fluency at work
-  and independent macro understanding of the oil market, building
-  optionality toward commercial/markets-adjacent roles.
-- No personal trading positions — transfer tasks target understanding
-  and work-relevant decisions, never trade calls.
-- Target is storage strength — objectives at instant recall on spaced
-  retrieval. A same-session quiz score is evidence of fluency only;
-  "known" requires a correct spaced retrieval on a later day.
+- Goals, success bar (storage strength on spaced retrieval), and scope
+  boundaries live in MISSION.md — the single source for *why*; this
+  file owns *how sessions run*.
 - Sessions are 30–40 minutes, sometimes from a phone via cloud sessions.
 
 ## Standing preferences
@@ -37,16 +32,18 @@ session log at the bottom.
 
 GLOSSARY.md (workspace root) is canonical oil markets & industry
 terminology; adhere to its terms in every artifact. This section is the
-single source of truth for promotion: a term is promoted into
-GLOSSARY.md only when its objective achieves a **spaced retrieval
-pass** — a pass on a later date than the objective's previous
-REVIEW.md entry, never from a same-session quiz. Candidate terms live
-on each objective's `key-terms` list in SYLLABUS.md.
+single source of truth for *when to promote*: a term is promoted into
+GLOSSARY.md only when its objective achieves a spaced pass (canonical
+definition: REVIEW-FORMAT.md), never from a same-session quiz.
+Candidate terms live on each objective's `key-terms` list in
+SYLLABUS.md.
 
 ## Session log
 
 One entry per session: date, mode, unit, results summary, carried-over
-objectives, next-session target.
+objectives, next-session target. To keep this log scrollable, when a
+book Part completes, collapse that Part's per-session entries into one
+summary entry (units covered, date range, anything still carried).
 
 - **2026-07-30 — Study (attempted) — 01 A Brief History of Oil.**
   Learner confirmed the chapter was read, but the session environment's

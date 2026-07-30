@@ -22,13 +22,18 @@ At the end of EVERY session, commit all changes and push to GitHub
 this material from other devices (including their phone), so unpushed
 work is effectively lost to them.
 
+Cloud sessions push to a `claude/...` side branch, and a push there
+does NOT update `main` or the phone-visible GitHub Pages site. So
+after pushing from a side branch, offer to open and merge a pull
+request into `main` — and do it when the user agrees. Work is not
+"delivered" until it reaches `main`.
+
 ### 2. Keep index.html up to date
 
 `index.html` at the repo root is the homepage. Whenever a new file is
-created in `reference/` or `lessons/`, add a link to it in
-`index.html`, **newest first**, using relative links (e.g.
-`reference/<filename>.html`) — they work when opened locally and
-resolve on GitHub Pages at
+created in `reference/`, add a link to it in `index.html`, **newest
+first**, using relative links (e.g. `reference/<filename>.html`) —
+they work when opened locally and resolve on GitHub Pages at
 `https://evgenymostovoy.github.io/oil-101-book/…`.
 
 ### 3. The user is a learner, not a developer

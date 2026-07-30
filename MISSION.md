@@ -27,16 +27,14 @@ situations, not recall for its own sake.
 
 ## Constraints
 
-- 30–40 minutes per day, sometimes from a phone via cloud sessions — all
-  state lives in this repo and is pushed every session.
 - The book (_Oil 101_, 2nd ed.) is the spine; chapter order drives
   sequencing.
 - Known ground is strictly D&C. Everything else — geology, reservoir,
-  production, refining, products, markets, trading — gets full treatment.
-  Fast-track eligibility is decided unit by unit, only when the learner
-  flags it.
-- Units: market-standard first (bbl, $/bbl, Mbpd, API gravity), with
-  SI/metric equivalents as parenthetical notes where useful.
+  production, refining, products, markets, trading — gets full
+  treatment.
+- Session logistics and presentation preferences (session length,
+  phone use, units convention, fast-track procedure) live in NOTES.md,
+  "Standing preferences" — the single source for *how sessions run*.
 
 ## Out of scope
 

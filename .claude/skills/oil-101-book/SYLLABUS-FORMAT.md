@@ -65,8 +65,7 @@ the ToC and diffing.
 - `objectives-extracted → in-progress`: a study session attempted at least
   one of the unit's objectives.
 - `in-progress → mastered`: requires BOTH (a) every objective in the entry
-  has a **spaced** recall pass recorded in REVIEW.md — a pass on a later
-  date than a previous ledger entry, not a same-session result — and
-  (b) `applied-pass: true`.
+  has a **spaced pass** recorded in REVIEW.md (canonical definition:
+  REVIEW-FORMAT.md), and (b) `applied-pass: true`.
 - A failed spaced review never demotes `status`; it only resets that
   objective's interval in REVIEW.md.

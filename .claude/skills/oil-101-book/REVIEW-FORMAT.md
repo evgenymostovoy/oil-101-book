@@ -23,17 +23,33 @@ An objective enters the ledger the first time it is actually tested
 
 ## Interval rules
 
-Expanding intervals, in days: **1 → 3 → 7 → 21**.
+Expanding intervals, in days: **1 → 3 → 7 → 21 → 60 → 120**.
+(The ladder extends to 120 days so that at full-course scale —
+~160 objectives — the daily due load shrinks instead of saturating
+the per-session review cap.)
 
 - First pass: next-due = last-tested + 1 day.
-- Each consecutive pass moves one step right (3, then 7, then 21 days).
-- After the 21-day step, further passes stay at 21-day intervals.
+- Each consecutive pass moves one step right (3, 7, 21, 60, then 120
+  days).
+- After the 120-day step, further passes stay at 120-day intervals.
 - Any fail resets the objective to the start: next-due =
   last-tested + 1 day.
 - All dates are YYYY-MM-DD.
-- The objective's current interval is always derivable from its own
-  line: `next-due − last-tested`. On a pass, advance one step right
-  from that interval; no history beyond the line itself is needed.
+- The governing principle: **a pass advances one step right from the
+  gap just demonstrated**. The objective's current gap is always
+  derivable from its own line (`next-due − last-tested`); no history
+  beyond the line itself is needed. This also settles the post-fail
+  case: a fail schedules a 1-day gap, so the pass that clears it
+  demonstrated 1-day retention and advances to 3 days — the recovery
+  ladder is identical to the initial one.
+
+## Spaced pass (canonical definition)
+
+A **spaced pass** is a pass recorded on a later date than the
+objective's previous ledger entry. Same-session results are never
+spaced passes. This definition is the single source of truth — it
+governs glossary promotion (NOTES.md, "Glossary policy") and the
+`mastered` transition (SYLLABUS-FORMAT.md).
 
 ## Worked example
 

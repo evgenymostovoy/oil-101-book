@@ -25,19 +25,26 @@ supplements never replace the book.
 
 ### Supplementary data & references (per-unit slots)
 
+> **Environment note (2026-07-30):** the cloud environment's network
+> allowlist currently includes only `oil101.morgandowney.com` and
+> `eia.gov`. Sources below marked ⚠ cannot be fetched until their
+> domain is added to the allowlist (claude.ai/code → environment →
+> network access).
+
 - [EIA — U.S. Energy Information Administration](https://www.eia.gov/petroleum/)
   Free U.S. and international petroleum statistics: prices, inventories,
   weekly supply/demand. Use for: real data in transfer tasks (curves,
   stocks, Cushing levels); citations for market chapters.
-- [JODI — Joint Organisations Data Initiative](https://www.jodidata.org/)
+- ⚠ [JODI — Joint Organisations Data Initiative](https://www.jodidata.org/)
   Monthly global oil production/demand/stock data by country. Use for:
-  global supply-demand transfer tasks.
-- [SPE PetroWiki](https://petrowiki.spe.org/)
+  global supply-demand transfer tasks. (Needs `jodidata.org` allowed.)
+- ⚠ [SPE PetroWiki](https://petrowiki.spe.org/)
   Peer-reviewed engineering reference. Use for: thin spots in Part One's
-  technical chapters (E&P, reserves) — citation only.
-- [SLB Energy Glossary](https://glossary.slb.com/)
+  technical chapters (E&P, reserves) — citation only. (Needs
+  `petrowiki.spe.org` allowed.)
+- ⚠ [SLB Energy Glossary](https://glossary.slb.com/)
   The industry's de-facto glossary. Use for: checking terminology when
-  drafting GLOSSARY.md definitions.
+  drafting GLOSSARY.md definitions. (Needs `glossary.slb.com` allowed.)
 - _Per-unit slots_: when a unit exposes a thin spot, add its supplement
   here under this section with a one-line "Use for:" annotation.
 
@@ -53,5 +60,6 @@ supplements never replace the book.
 ## Gaps
 
 - No curated source yet for live forward-curve data that is free and
-  phone-friendly (CME settlement pages are the current candidate) —
-  needed by the first chapter 18 transfer task.
+  phone-friendly (CME settlement pages are the current candidate, and
+  `cmegroup.com` would also need adding to the environment's network
+  allowlist) — needed by the first chapter 18 transfer task.
