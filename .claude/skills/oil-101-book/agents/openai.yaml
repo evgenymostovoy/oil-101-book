@@ -1,0 +1,5 @@
+interface:
+  display_name: "Oil 101 Book"
+  short_description: "Run a study session on Oil 101"
+policy:
+  allow_implicit_invocation: false
