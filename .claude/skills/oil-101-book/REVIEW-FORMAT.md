@@ -24,9 +24,6 @@ An objective enters the ledger the first time it is actually tested
 ## Interval rules
 
 Expanding intervals, in days: **1 → 3 → 7 → 21 → 60 → 120**.
-(The ladder extends to 120 days so that at full-course scale —
-~160 objectives — the daily due load shrinks instead of saturating
-the per-session review cap.)
 
 - First pass: next-due = last-tested + 1 day.
 - Each consecutive pass moves one step right (3, 7, 21, 60, then 120

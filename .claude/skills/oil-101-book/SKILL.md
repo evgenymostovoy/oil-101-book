@@ -5,11 +5,11 @@ disable-model-invocation: true
 argument-hint: "chapter/unit to study, or 'review'"
 ---
 
-Run one time-boxed study session (length: the "Time box" standing
-preference in NOTES.md; the learner may be on a phone) on _Oil 101_ by
-Morgan Downey, 2nd edition online. The
-book is the spine: ground every claim in a fetch of the live chapter,
-never in parametric memory. The workspace state files are:
+Run one time-boxed study session on _Oil 101_ by Morgan Downey, 2nd
+edition online (session length: NOTES.md, "Time box"; the learner may
+be on a phone). The book is the spine: ground every claim in a fetch
+of the live chapter, never in parametric memory. The workspace state
+files are:
 
 - `SYLLABUS.md` — units, statuses, objectives ([SYLLABUS-FORMAT.md](./SYLLABUS-FORMAT.md))
 - `REVIEW.md` — spaced-review ledger ([REVIEW-FORMAT.md](./REVIEW-FORMAT.md))
@@ -26,17 +26,19 @@ never in parametric memory. The workspace state files are:
 ## Step 0 — Mode selection
 
 Read SYLLABUS.md, REVIEW.md, NOTES.md (profile, preferences, session
-log), and any learning records. Determine the **current unit**: the
-first unit that still needs study — status `objectives-extracted`, or
-`in-progress` with objectives not yet all attempted (an objective
-counts as attempted exactly when its id appears in REVIEW.md; the
-session log is context, not the source of truth), or `in-progress`
-with `applied-pass: false` (a pending transfer task keeps a unit
-studyable — otherwise mastery would be unreachable). A unit whose
-objectives have all been attempted AND whose applied task is passed is
-serviced by review steps, never re-studied. If no unit needs study,
-the current unit is the first `not-started` unit; its objectives
-preview runs in Closing either way.
+log), and any learning records. A unit **needs study** when any of
+these holds:
+
+- status is `objectives-extracted`;
+- status is `in-progress` and at least one of its objective ids is
+  absent from REVIEW.md (an objective counts as attempted exactly when
+  its id appears in the ledger);
+- status is `in-progress` and `applied-pass` is `false`.
+
+The **current unit** is the first unit that needs study; a unit that
+satisfies none of the three is serviced by review steps, never
+re-studied. If no unit needs study, the current unit is the first
+`not-started` unit; its objectives preview runs in Closing either way.
 
 The argument can override the unit choice. Then route (the question
 below governs even for a `not-started` unit — the learner may have read
@@ -45,12 +47,10 @@ ahead):
 - Argument `review` → Review mode.
 - Otherwise ask the learner one question: "Have you read <unit>?"
   - No → Review mode.
-  - Yes → Study mode — or, if the learner flags the unit as known
-    ground when asked (the standing preference in NOTES.md: eligibility
-    is decided unit by unit by the learner, never assumed from the
-    chapter title), Study mode in fast-track form (skip explain-back
+  - Yes → Study mode — in fast-track form if the learner flags the
+    unit as known ground (NOTES.md, "Fast-track"): skip explain-back
     and study pacing; go straight to a full objective quiz plus one
-    applied task).
+    applied task.
 
 Done when: mode and target unit are stated to the learner in one line.
 
@@ -70,8 +70,7 @@ Done when: mode and target unit are stated to the learner in one line.
 ## Study mode
 
 If the unit's objectives are all attempted and only `applied-pass` is
-still false, skip straight to step 5 and run the transfer task —
-explain-back and warm-up would be re-treading passed ground.
+still false, skip straight to step 5 and run the transfer task.
 
 1. **Split check** (only if the unit has `may-split: true` and status
    `not-started`): fetch the chapter, split it into 2–3 sub-units by
@@ -100,10 +99,9 @@ explain-back and warm-up would be re-treading passed ground.
    designed from MISSION.md (e.g. interpret an actual forward curve,
    work a netback, assess a real crude grade). A transfer-task pass
    sets the unit's `applied-pass: true`. Track pass/fail per objective.
-   Respect the time box: at the checkpoint set in NOTES.md ("Time
-   box"), stop and carry over. Done
-   when: every objective for this unit is either attempted this session
-   or explicitly listed as carried-over.
+   Respect the time box (NOTES.md): at its checkpoint, stop and carry
+   over. Done when: every objective for this unit is either attempted
+   this session or explicitly listed as carried-over.
 6. **Artifacts**: create or update a `reference/` cheat sheet only when
    the unit's material earns one (dense numbers, conversions, curve
    shapes — link `assets/course.css`). Glossary promotion happens in
@@ -113,12 +111,11 @@ explain-back and warm-up would be re-treading passed ground.
 
 ## Closing (both modes)
 
-- **Glossary promotion** (do this BEFORE rewriting REVIEW.md — the
-  evidence lives in the pre-update ledger): for each objective that
-  achieved a **spaced pass** today (definition: REVIEW-FORMAT.md),
-  promote its key terms (listed on its SYLLABUS.md objective line)
-  into GLOSSARY.md per GLOSSARY-FORMAT.md. Same-session quiz results
-  are fluency evidence only and promote nothing (policy: NOTES.md,
+- **Glossary promotion** (before rewriting REVIEW.md): for each
+  objective that achieved a **spaced pass** today (definition:
+  REVIEW-FORMAT.md), promote its key terms (listed on its SYLLABUS.md
+  objective line) into GLOSSARY.md per GLOSSARY-FORMAT.md.
+  Same-session quiz results promote nothing (policy: NOTES.md,
   "Glossary policy").
 - Update REVIEW.md (interval rules per REVIEW-FORMAT.md) and
   SYLLABUS.md (status transitions per SYLLABUS-FORMAT.md).
@@ -154,7 +151,9 @@ explain-back and warm-up would be re-treading passed ground.
   task is allowed and encouraged.
 - Mark an objective passed only after an actual retrieval attempt from
   the learner.
-- Mark a unit `mastered` only when it also has an applied-task pass.
+- Mark a unit `mastered` only when every objective has a spaced pass
+  and an applied-task pass is recorded (transition rules:
+  SYLLABUS-FORMAT.md).
 - Promote a glossary term only on a spaced pass (policy: NOTES.md,
   "Glossary policy").
 - If a fetch fails, say so and fall back to Review mode rather than
