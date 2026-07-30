@@ -27,8 +27,10 @@ never in parametric memory. The workspace state files are:
 Read SYLLABUS.md, REVIEW.md, NOTES.md (profile, preferences, session
 log), and any learning records. Determine the **current unit**: the
 first unit that still needs study — status `objectives-extracted`, or
-`in-progress` with objectives not yet all attempted (check the session
-log). A unit whose objectives have all been attempted and are only
+`in-progress` with objectives not yet all attempted (an objective
+counts as attempted exactly when its id appears in REVIEW.md; the
+session log is context, not the source of truth). A unit whose
+objectives have all been attempted and are only
 awaiting spaced review passes is serviced by review steps, never
 re-studied. If no unit needs study, the current unit is the first
 `not-started` unit; its objectives preview runs in Closing either way.
@@ -40,10 +42,12 @@ ahead):
 - Argument `review` → Review mode.
 - Otherwise ask the learner one question: "Have you read <unit>?"
   - No → Review mode.
-  - Yes → Study mode — or, if MISSION.md marks the unit fast-track
-    eligible and the learner confirms, Study mode in fast-track form
-    (skip explain-back and study pacing; go straight to a full
-    objective quiz plus one applied task).
+  - Yes → Study mode — or, if the learner flags the unit as known
+    ground when asked (the standing preference in NOTES.md: eligibility
+    is decided unit by unit by the learner, never assumed from the
+    chapter title), Study mode in fast-track form (skip explain-back
+    and study pacing; go straight to a full objective quiz plus one
+    applied task).
 
 Done when: mode and target unit are stated to the learner in one line.
 
@@ -69,7 +73,8 @@ Done when: mode and target unit are stated to the learner in one line.
    when: SYLLABUS.md reflects the split.
 2. **Objectives check**: if the unit's status is `not-started` (no
    preview happened — first ever session, or the learner jumped ahead),
-   fetch the chapter URL, distill 4–6 objectives and key terms into
+   fetch the chapter URL, distill 4–6 objectives — each carrying its
+   key terms on the objective line per SYLLABUS-FORMAT.md — into
    SYLLABUS.md weighted by MISSION.md, set status
    `objectives-extracted`, and show them — noting that
    reading-before-objectives is the fallback, not the norm. Done when:
@@ -100,22 +105,29 @@ Done when: mode and target unit are stated to the learner in one line.
 
 ## Closing (both modes)
 
+- **Glossary promotion** (do this BEFORE rewriting REVIEW.md — the
+  evidence lives in the pre-update ledger): an objective achieves a
+  **spaced pass** when today's pass is on a later date than its
+  existing REVIEW.md entry. For each such objective, promote its
+  key terms (listed on its SYLLABUS.md objective line) into
+  GLOSSARY.md per GLOSSARY-FORMAT.md. Same-session quiz results are
+  fluency evidence only and promote nothing (policy: NOTES.md,
+  "Glossary policy").
 - Update REVIEW.md (interval rules per REVIEW-FORMAT.md) and
   SYLLABUS.md (status transitions per SYLLABUS-FORMAT.md).
-- **Glossary promotion**: for each objective that just achieved a
-  spaced pass (a pass on a later date than it was first taught),
-  promote its key terms into GLOSSARY.md per GLOSSARY-FORMAT.md. Never
-  promote from a same-session quiz.
 - Append one entry to the NOTES.md session log: date, mode, unit,
   results summary, carried-over objectives, next-session target.
 - Write a learning record (`learning-records/NNNN-<dash-case>.md`, per
   LEARNING-RECORD-FORMAT.md) only when the session produced a
   non-obvious insight or changed what to teach next — most sessions
   won't need one; the session log carries routine bookkeeping.
-- **Next-unit preview**: if the current unit's objectives have now all
-  been attempted at least once (whether or not spaced passes are still
-  pending), or step 0 routed here for a `not-started` unit, or the
-  learner says they're moving on: fetch the next unit's chapter URL,
+- **Unit preview**: run this if the current unit's objectives have now
+  all been attempted at least once (whether or not spaced passes are
+  still pending), or step 0 routed here for a `not-started` unit, or
+  the learner says they're moving on. The unit to preview is the next
+  unit after the current one — except when the current unit is still
+  `not-started` (its objectives were never extracted), in which case
+  preview the current unit itself. Fetch that unit's chapter URL,
   extract its objectives into SYLLABUS.md (status
   `objectives-extracted`), and show them as a reading guide for before
   the next session.
@@ -125,18 +137,23 @@ Done when: mode and target unit are stated to the learner in one line.
 
 ## Hard constraints
 
-- Never write book text or close paraphrase into any file — every
-  artifact is compressed and original, deep-linking to the chapter URL
-  for its source.
+- Every artifact is compressed and original, deep-linking to the
+  chapter URL for its source — book text and close paraphrase stay in
+  the book, out of this repo.
 - Book fetches per session are limited to: the current unit's URL, the
   next unit's URL for the preview, and at most one objective's URL
   during review. These limits govern book fetches only — fetching
   public market data (prices, curves, EIA/JODI stats) for a transfer
   task is allowed and encouraged.
-- Never mark an objective passed without an actual retrieval attempt
-  from the learner.
-- Never mark a unit `mastered` without an applied-task pass.
-- Never promote a glossary term without a spaced pass.
+- Mark an objective passed only after an actual retrieval attempt from
+  the learner.
+- Mark a unit `mastered` only when it also has an applied-task pass.
+- Promote a glossary term only on a spaced pass (policy: NOTES.md,
+  "Glossary policy").
 - If a fetch fails, say so and fall back to Review mode rather than
-  inventing content from memory.
+  inventing content from memory. If Review mode also has nothing
+  servable without a fetch (empty ledger), close out instead: log the
+  attempt in the NOTES.md session log, tell the learner exactly which
+  URL was unreachable and how to restore access, commit and push, and
+  end the session.
 - Use today's date in YYYY-MM-DD everywhere.
