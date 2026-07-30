@@ -29,11 +29,13 @@ log), and any learning records. Determine the **current unit**: the
 first unit that still needs study — status `objectives-extracted`, or
 `in-progress` with objectives not yet all attempted (an objective
 counts as attempted exactly when its id appears in REVIEW.md; the
-session log is context, not the source of truth). A unit whose
-objectives have all been attempted and are only
-awaiting spaced review passes is serviced by review steps, never
-re-studied. If no unit needs study, the current unit is the first
-`not-started` unit; its objectives preview runs in Closing either way.
+session log is context, not the source of truth), or `in-progress`
+with `applied-pass: false` (a pending transfer task keeps a unit
+studyable — otherwise mastery would be unreachable). A unit whose
+objectives have all been attempted AND whose applied task is passed is
+serviced by review steps, never re-studied. If no unit needs study,
+the current unit is the first `not-started` unit; its objectives
+preview runs in Closing either way.
 
 The argument can override the unit choice. Then route (the question
 below governs even for a `not-started` unit — the learner may have read
@@ -56,7 +58,7 @@ Done when: mode and target unit are stated to the learner in one line.
 1. Collect the objectives in REVIEW.md due today or overdue, oldest-due
    first, capped at 8. If the ledger is empty (nothing tested yet), say
    so and offer the current unit's objectives preview (Closing's
-   preview step) instead of quizzing on nothing. Quiz one objective at
+   "Unit preview" step) instead of quizzing on nothing. Quiz one objective at
    a time, in conversation, retrieval-first — no multiple choice unless
    asked; mix recall and mechanism questions; judge answers against
    GLOSSARY.md, the `reference/` docs, and, where needed, a fetch of at
@@ -65,6 +67,10 @@ Done when: mode and target unit are stated to the learner in one line.
 2. Go to Closing.
 
 ## Study mode
+
+If the unit's objectives are all attempted and only `applied-pass` is
+still false, skip straight to step 5 and run the transfer task —
+explain-back and warm-up would be re-treading passed ground.
 
 1. **Split check** (only if the unit has `may-split: true` and status
    `not-started`): fetch the chapter, split it into 2–3 sub-units by
@@ -106,12 +112,11 @@ Done when: mode and target unit are stated to the learner in one line.
 ## Closing (both modes)
 
 - **Glossary promotion** (do this BEFORE rewriting REVIEW.md — the
-  evidence lives in the pre-update ledger): an objective achieves a
-  **spaced pass** when today's pass is on a later date than its
-  existing REVIEW.md entry. For each such objective, promote its
-  key terms (listed on its SYLLABUS.md objective line) into
-  GLOSSARY.md per GLOSSARY-FORMAT.md. Same-session quiz results are
-  fluency evidence only and promote nothing (policy: NOTES.md,
+  evidence lives in the pre-update ledger): for each objective that
+  achieved a **spaced pass** today (definition: REVIEW-FORMAT.md),
+  promote its key terms (listed on its SYLLABUS.md objective line)
+  into GLOSSARY.md per GLOSSARY-FORMAT.md. Same-session quiz results
+  are fluency evidence only and promote nothing (policy: NOTES.md,
   "Glossary policy").
 - Update REVIEW.md (interval rules per REVIEW-FORMAT.md) and
   SYLLABUS.md (status transitions per SYLLABUS-FORMAT.md).
