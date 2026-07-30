@@ -31,10 +31,11 @@ first unit that still needs study — status `objectives-extracted`, or
 log). A unit whose objectives have all been attempted and are only
 awaiting spaced review passes is serviced by review steps, never
 re-studied. If no unit needs study, the current unit is the first
-`not-started` unit: run Review mode this session and its objectives
-preview in Closing.
+`not-started` unit; its objectives preview runs in Closing either way.
 
-The argument can override the unit choice. Then route:
+The argument can override the unit choice. Then route (the question
+below governs even for a `not-started` unit — the learner may have read
+ahead):
 
 - Argument `review` → Review mode.
 - Otherwise ask the learner one question: "Have you read <unit>?"
