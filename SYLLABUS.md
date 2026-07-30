@@ -11,8 +11,8 @@
 - url: https://oil101.morgandowney.com/chapters/history
 - duration: not listed
 - may-split: false
-- status: objectives-extracted
-- applied-pass: false
+- status: in-progress
+- applied-pass: true
 - objectives:
   - 01-pricing-power: Trace who set the world oil price across eras — Standard Oil, Texas Railroad Commission, OPEC, exchange futures — and explain why control of spare capacity is the common mechanism · key-terms: spare capacity, Seven Sisters, prorationing
   - 01-1971-reset: Explain the two 1971 events (Tehran Agreement; Nixon ending gold convertibility) and how each shifted power from the Seven Sisters toward OPEC ahead of the 1973 embargo · key-terms: posted price, Tehran Agreement
@@ -26,9 +26,15 @@
 - url: https://oil101.morgandowney.com/chapters/crude-oil-assay
 - duration: 18:41
 - may-split: false
-- status: not-started
+- status: objectives-extracted
 - applied-pass: false
 - objectives:
+  - 02-api-gravity: Explain what API gravity measures (inverted density: bigger = lighter), work the formula °API = 141.5/SG − 131.5, and place the class cutoffs — light >31°, medium 22–31°, heavy 10–22°, extra-heavy <10° · key-terms: API gravity, specific gravity
+  - 02-sweet-sour: State the sulfur classes — sweet <0.5%, medium-sour 0.5–2.0%, sour >2.0% by weight — and the three ways sulfur destroys value (energy content, corrosion, regulated pollutant) · key-terms: sweet crude, sour crude
+  - 02-quality-matrix: Place the markers on the API-vs-sulfur quality matrix — WTI ~40°/0.24%, Brent ~38°/0.37%, Dubai 31°/2.0%, Maya 22°/3.4%, Urals 31°/1.5% — and say which refineries buy each quadrant · key-terms: quality matrix, marker crude
+  - 02-streams-blends: Distinguish field → stream → blend and explain why traded markers are blends (pooled volume for logistics; smoothing of extreme properties) · key-terms: stream, blend
+  - 02-assay-price: Explain how an assay becomes a price — refiner's yield-value calculation, quality differentials to benchmarks, and why heavy-sour discounts widen when coking/hydrotreating capacity is tight · key-terms: assay, quality differential, off-spec
+  - 02-minor-properties: Recall the long-tail assay properties and the trouble each causes — TAN >0.7 acidic/corrosive, vanadium & nickel poison catalysts, viscosity/pour point block flow, RVP capped for smog, BS&W <1% intake spec · key-terms: TAN, pour point, BS&W
 - records:
 
 ### 03 — Components of Oil Liquids
