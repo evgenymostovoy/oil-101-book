@@ -45,3 +45,13 @@ same-session quiz.
 
 One entry per session: date, mode, unit, results summary, carried-over
 objectives, next-session target.
+
+- **2026-07-30 — Study (attempted) — 01 A Brief History of Oil.**
+  Learner confirmed the chapter was read, but the session environment's
+  network policy blocked all fetches of oil101.morgandowney.com (and
+  archive.org), so no objectives could be extracted and no grounded
+  quizzing was possible. No objectives attempted; nothing carried over
+  beyond the whole unit. Fix before next session: allow the domain
+  `oil101.morgandowney.com` in the Claude Code environment's network
+  settings. Next-session target: Unit 01, full study session
+  (objectives extraction → explain-back → practice).
