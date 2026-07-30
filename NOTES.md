@@ -83,3 +83,15 @@ summary entry (units covered, date range, anything still carried).
   a `claude/...` branch — merge into `main` for the phone-visible
   site to update. Next-session target: Unit 01 study
   (explain-back → practice).
+- **2026-07-30 — Study — 01 A Brief History of Oil.** Explain-back plus
+  targeted practice; all six objectives attempted. Pass: pricing-power,
+  1986-countershock. Fail (re-test 07-31): 1971-reset, oil-shocks,
+  price-discovery, cycle-timeline. Transfer task (4%-of-GDP gauge on
+  today's market, $164/bbl threshold inverted) passed → applied-pass
+  true. LR-0001 written (recall profile: narrative strong, anchors
+  weak, plausible-substitution risk). No glossary promotions (first-day
+  results only). Unit 02 (Crude Oil Assay) objectives extracted as
+  reading guide. Operational: eia.gov still blocked despite allowlist
+  attempt — re-add (try `www.eia.gov`) before a data-driven transfer
+  task is needed. Next-session target: review of the four failed
+  objectives (due 07-31), then Unit 02 study if the chapter is read.
