@@ -5,8 +5,9 @@ disable-model-invocation: true
 argument-hint: "chapter/unit to study, or 'review'"
 ---
 
-Run one time-boxed study session (target 30–40 minutes; the learner may
-be on a phone) on _Oil 101_ by Morgan Downey, 2nd edition online. The
+Run one time-boxed study session (length: the "Time box" standing
+preference in NOTES.md; the learner may be on a phone) on _Oil 101_ by
+Morgan Downey, 2nd edition online. The
 book is the spine: ground every claim in a fetch of the live chapter,
 never in parametric memory. The workspace state files are:
 
@@ -99,7 +100,8 @@ explain-back and warm-up would be re-treading passed ground.
    designed from MISSION.md (e.g. interpret an actual forward curve,
    work a netback, assess a real crude grade). A transfer-task pass
    sets the unit's `applied-pass: true`. Track pass/fail per objective.
-   Respect the time box: at ~35 minutes, stop and carry over. Done
+   Respect the time box: at the checkpoint set in NOTES.md ("Time
+   box"), stop and carry over. Done
    when: every objective for this unit is either attempted this session
    or explicitly listed as carried-over.
 6. **Artifacts**: create or update a `reference/` cheat sheet only when

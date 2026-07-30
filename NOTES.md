@@ -18,10 +18,14 @@ session log at the bottom.
 - Goals, success bar (storage strength on spaced retrieval), and scope
   boundaries live in MISSION.md — the single source for *why*; this
   file owns *how sessions run*.
-- Sessions are 30–40 minutes, sometimes from a phone via cloud sessions.
+- Sessions are sometimes run from a phone via cloud sessions.
 
 ## Standing preferences
 
+- **Time box.** Study sessions are **25–30 minutes** for now (set
+  2026-07-30). Checkpoint at ~25 minutes: stop, carry over what's
+  left. This is the single source for session length — the skill
+  reads it from here.
 - **Units.** Market-standard first: bbl, $/bbl, Mbpd, API gravity, with
   SI/metric equivalents as parenthetical notes where useful. (Deliberate
   contrast with the SI-first sibling engineering workspace.)
