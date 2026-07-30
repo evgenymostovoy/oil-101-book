@@ -31,6 +31,9 @@ Expanding intervals, in days: **1 → 3 → 7 → 21**.
 - Any fail resets the objective to the start: next-due =
   last-tested + 1 day.
 - All dates are YYYY-MM-DD.
+- The objective's current interval is always derivable from its own
+  line: `next-due − last-tested`. On a pass, advance one step right
+  from that interval; no history beyond the line itself is needed.
 
 ## Worked example
 

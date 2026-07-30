@@ -21,10 +21,10 @@ the ToC and diffing.
 - status: objectives-extracted
 - applied-pass: false
 - objectives:
-  - 02-api-gravity: State what API gravity measures and place light/medium/heavy cutoffs on the scale
-  - 02-sweet-sour: Explain the sulfur cutoff between sweet and sour crude and why refiners price it
+  - 02-api-gravity: State what API gravity measures and place light/medium/heavy cutoffs on the scale · key-terms: API gravity, light/heavy crude
+  - 02-sweet-sour: Explain the sulfur cutoff between sweet and sour crude and why refiners price it · key-terms: sweet crude, sour crude
 - records:
-  - [LR-0002](../../../learning-records/0002-assay-baseline.md)
+  - [LR-0002](learning-records/0002-assay-baseline.md)
 ```
 
 ## Fields
@@ -49,9 +49,14 @@ the ToC and diffing.
   transfer/application task.
 - `objectives` — empty at setup. Filled by the skill's objectives pass:
   4–6 objectives distilled from the live chapter, weighted by MISSION.md.
-  Each line is `<unit>-<short-slug>: <objective text>`; the id is the same
-  id used in REVIEW.md.
-- `records` — links to related learning records; empty until one exists.
+  Each line is
+  `<unit>-<short-slug>: <objective text> · key-terms: <term>, <term>`;
+  the id is the same id used in REVIEW.md, and the key terms are the
+  candidate GLOSSARY.md entries promoted when the objective earns a
+  spaced pass.
+- `records` — links to related learning records, relative to the
+  workspace root where SYLLABUS.md lives (e.g.
+  `learning-records/0002-assay-baseline.md`); empty until one exists.
 
 ## Transition rules
 
@@ -60,6 +65,8 @@ the ToC and diffing.
 - `objectives-extracted → in-progress`: a study session attempted at least
   one of the unit's objectives.
 - `in-progress → mastered`: requires BOTH (a) every objective in the entry
-  has a recall pass recorded in REVIEW.md, and (b) `applied-pass: true`.
+  has a **spaced** recall pass recorded in REVIEW.md — a pass on a later
+  date than a previous ledger entry, not a same-session result — and
+  (b) `applied-pass: true`.
 - A failed spaced review never demotes `status`; it only resets that
   objective's interval in REVIEW.md.

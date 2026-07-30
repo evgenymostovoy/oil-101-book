@@ -14,12 +14,12 @@
 - status: objectives-extracted
 - applied-pass: false
 - objectives:
-  - 01-pricing-power: Trace who set the world oil price across eras — Standard Oil, Texas Railroad Commission, OPEC, exchange futures — and explain why control of spare capacity is the common mechanism
-  - 01-1971-reset: Explain the two 1971 events (Tehran Agreement; Nixon ending gold convertibility) and how each shifted power from the Seven Sisters toward OPEC ahead of the 1973 embargo
-  - 01-oil-shocks: Describe the 1973 and 1979 oil shocks (causes, price moves) and state the demand-destruction rule of thumb — oil spend above ~4% of GDP signals recession risk
-  - 01-1986-countershock: Explain Saudi Arabia's 1985–86 abandonment of the swing-producer role — quota cheating, netback pricing, the >70% price collapse — and its consequences (Soviet finances, the long low-price era)
-  - 01-price-discovery: Explain how transparent oil pricing emerged — NYMEX futures (heating oil 1978, WTI crude 1983) and formula pricing off benchmarks — replacing posted prices and long-term contracts
-  - 01-cycle-timeline: Reconstruct the boom–bust price arc 1859–2026 with anchor events: Drake 1859, Spindletop 1901, embargo 1973, counter-shock 1986, $10.72 in 1998, $147 in 2008, shale bust 2014, −$37.63 in 2020, Russia 2022, Hormuz 2026
+  - 01-pricing-power: Trace who set the world oil price across eras — Standard Oil, Texas Railroad Commission, OPEC, exchange futures — and explain why control of spare capacity is the common mechanism · key-terms: spare capacity, Seven Sisters, prorationing
+  - 01-1971-reset: Explain the two 1971 events (Tehran Agreement; Nixon ending gold convertibility) and how each shifted power from the Seven Sisters toward OPEC ahead of the 1973 embargo · key-terms: posted price, Tehran Agreement
+  - 01-oil-shocks: Describe the 1973 and 1979 oil shocks (causes, price moves) and state the demand-destruction rule of thumb — oil spend above ~4% of GDP signals recession risk · key-terms: demand destruction, oil shock
+  - 01-1986-countershock: Explain Saudi Arabia's 1985–86 abandonment of the swing-producer role — quota cheating, netback pricing, the >70% price collapse — and its consequences (Soviet finances, the long low-price era) · key-terms: swing producer, netback pricing
+  - 01-price-discovery: Explain how transparent oil pricing emerged — NYMEX futures (heating oil 1978, WTI crude 1983) and formula pricing off benchmarks — replacing posted prices and long-term contracts · key-terms: benchmark, formula pricing, WTI
+  - 01-cycle-timeline: Reconstruct the boom–bust price arc 1859–2026 with anchor events: Drake 1859, Spindletop 1901, embargo 1973, counter-shock 1986, $10.72 in 1998, $147 in 2008, shale bust 2014, −$37.63 in 2020, Russia 2022, Hormuz 2026 · key-terms: boom–bust cycle
 - records:
 
 ### 02 — A Crude Oil Assay

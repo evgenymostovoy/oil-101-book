@@ -1,6 +1,6 @@
 # GLOSSARY.md Format
 
-`GLOSSARY.md` is the canonical language for this teaching workspace. All explainers, exercises, and learning records should adhere to its terminology. Building it is itself part of learning: compressing a concept into a tight definition is evidence the user understands it.
+`GLOSSARY.md` is the canonical language for this teaching workspace. All artifacts, exercises, and learning records should adhere to its terminology. Building it is itself part of learning: compressing a concept into a tight definition is evidence the user understands it.
 
 ## Structure
 
@@ -11,22 +11,22 @@
 
 ## Terms
 
-**Hypertrophy**:
-Muscle growth driven by mechanical tension and metabolic stress over repeated training sessions.
-_Avoid_: Bulking, getting big
+**Spare capacity**:
+Production that can be brought online quickly and sustained, held idle as a buffer — whoever controls it sets the marginal price.
+_Avoid_: Idle capacity, headroom
 
-**Progressive overload**:
-Systematically increasing the demand on a muscle over time — via load, volume, or intensity.
-_Avoid_: Pushing harder, levelling up
+**Backwardation**:
+A forward curve with near-dated contracts priced above later-dated ones, signalling tight prompt supply.
+_Avoid_: Inverted curve, downward-sloping market
 
-**RPE (Rate of Perceived Exertion)**:
-A 1–10 self-rating of how hard a set felt, where 10 is failure and 8 means two reps left in the tank.
-_Avoid_: Effort score, intensity rating
+**Sweet crude**:
+Crude oil low enough in sulfur to need less processing — the "sweet/sour" line is a quality and price boundary.
+_Avoid_: Low-sulfur oil, clean crude
 ```
 
 ## Rules
 
-- **Add a term only when the user understands it.** The glossary is a record of compressed knowledge, not a dictionary the user reads to learn. If the user has just been introduced to a concept, wait until they can use it correctly before promoting it here.
+- **Promotion is governed by the workspace glossary policy** (NOTES.md, "Glossary policy", the single source of truth): a term enters only when its objective has a spaced retrieval pass in REVIEW.md. The glossary is a record of compressed knowledge, not a dictionary the user reads to learn.
 - **Be opinionated.** When several words exist for the same concept, pick the best one and list the rest as aliases to avoid. This is how language compresses.
 - **Keep definitions tight.** One or two sentences. Define what the term IS, not what it does or how to do it.
 - **Use the glossary's own terms inside definitions.** Once a term is in the glossary, prefer it everywhere — including inside other definitions. This is what makes complex terms easier to grasp later.
