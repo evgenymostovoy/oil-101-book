@@ -9,6 +9,12 @@ session log at the bottom.
 - Drilling & completion engineer. D&C is professional ground; everything
   else in the book — geology, reservoir, production, refining, products,
   markets, trading — is new territory and gets full treatment.
+- Work context (for transfer-task design): ~15 years of D&C practice on
+  the Norwegian Continental Shelf; current company operates on the NCS
+  plus two deepwater pre-salt projects in Brazil. Natural anchors for
+  applied tasks: Brent as the home benchmark, NCS crude grades (e.g.
+  Johan Sverdrup, Ekofisk), Brazilian pre-salt grades and their export
+  flows, North Sea and Santos/Campos logistics.
 - Goals, success bar (storage strength on spaced retrieval), and scope
   boundaries live in MISSION.md — the single source for *why*; this
   file owns *how sessions run*.
@@ -37,6 +43,14 @@ GLOSSARY.md only when its objective achieves a spaced pass (canonical
 definition: REVIEW-FORMAT.md), never from a same-session quiz.
 Candidate terms live on each objective's `key-terms` list in
 SYLLABUS.md.
+
+Seeding exception: vocabulary that is practice-known from the
+learner's D&C profession (per the learner profile above) may be seeded
+directly into GLOSSARY.md when it first comes up in a unit, without a
+spaced pass — it is already demonstrably known from daily use. Seeding
+applies only to practice-known D&C vocabulary, never to newly taught
+market, refining, or trading terms; those always earn their way in via
+spaced pass.
 
 ## Session log
 
